@@ -1,0 +1,38 @@
+.first {
+    width: 26.875rem;
+    height: 11.25rem;
+    
+}
+
+.card-body {
+    display: flex;
+ 
+
+
+}
+
+.card-left-side {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.card-right-side {
+    width: 12.75rem;
+    height: 11.25rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.card-right-side p{
+   margin:  0.625rem;
+}
+
+.card-right-side a{
+    display: flex;
+    width: 6.875rem;
+    height: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    margin:0 2.875rem;
+}

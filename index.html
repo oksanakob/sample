@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+ <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+
 </head>
 
 <body>
@@ -16,21 +22,258 @@
 
 
 
-    <div class="card1" >
-        
-        <div class="card-body">
-            <div class="card-left-side">
-            <img src="img/doubletree.png"></img>
-            </div>
-            <div class="card-right-side">
-            <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
-            <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
-            <a href="#" class="btn btn-success">US$87</a>
+
+
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-md-6 col-sm-6 col-xs-12">
+    <form class="form-horizontal" method="post">
+     <div class="form-group ">
+      <label class="control-label col-sm-2 requiredField" for="date">
+       Date
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="col-sm-10">
+       <input class="form-control" id="date" name="date" placeholder="Depart" type="text"/>
+      </div>
+     </div>
+     <div class="form-group">
+      <div class="col-sm-10 col-sm-offset-2">
+       <button class="btn btn-primary " name="submit" type="submit">
+        Submit
+       </button>
+      </div>
+     </div>
+    </form>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<!-- Extra JavaScript/CSS added manually in "Settings" tab -->
+<!-- Include jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<script>
+	$(document).ready(function(){
+		var date_input=$('input[name="date"]'); //our date input has the name "date"
+		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+		date_input.datepicker({
+			format: 'mm/dd/yyyy',
+			container: container,
+			todayHighlight: true,
+			autoclose: true,
+		})
+	})
+</script>
+© 2014-2017 Pareto Software, LLC   | Blog | Bootstrap Form Builder
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker3'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                </div>
             </div>
         </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker3').datetimepicker({
+                    format: 'LT'
+                });
+            });
+        </script>
     </div>
+</div>
 
 
+    <div class="d-flex align-content-start flex-wrap">
+
+        <div class="card-body first">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+        <div class="card-body second">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+        <div class="card-body third">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+        <div class="card-body fourth">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+        <div class="card-body fifth">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+        <div class="card-body six">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+        <div class="card-body seven">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+        <div class="card-body eight">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+        <div class="card-body nine">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+        <div class="card-body ten">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+        <div class="card-body eleven">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+        <div class="card-body twelve">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+        <div class="card-body thirteen">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+        <div class="card-body fourteen">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+        <div class="card-body fifteen">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+        <div class="card-body sixteen">
+            <div class="card-left-side">
+                <img src="img/doubletree.png"></img>
+            </div>
+            <div class="card-right-side">
+                <p class="card-title"><strong>DoubleTree by Hilton Antalya-Kemer</strong></p>
+                <p class="card-text">Ataturk Bulvari 28, Kemer 07980, Turkey</p>
+                <a href="#" class="btn btn-success">US$87</a>
+            </div>
+        </div>
+
+
+    </div>
 
 
 
@@ -38,4 +281,3 @@
 </body>
 
 </html>
-    
